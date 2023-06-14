@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: f96676752b3ee22c068dfea49e122488cd32c53a368b11b2b8a9979181d6e5ad
+  sha256: 2b04dbcafa49cadffab15e0d8b1c7fadcca5096d965f28e9ecaad8305ab6b5b9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8
     - setuptools >=61.2
     - setuptools-scm >=7.0
     - pip
   run:
-    - python >=3.8,<3.11
-    - numpy >=1.20,<1.24
+    - python >=3.8
+    - numpy >=1.21
     - numba >=0.50
     - xarray >=0.16
     - typing-extensions
@@ -41,14 +41,10 @@ about:
   home: https://github.com/usnistgov/cmomy
   summary: Central (co)moment calculation/manipulation
   description: |
-    A Python package to calculate and manipulate Central (co)moments.
-    The main features of `cmomy` are 1) Fast calculation of central
-    moments and comoments with weights.  The speed comes from using
-    Numba.  2) Support for scalar and vector inputs. 3) Numpy and
-    xarray DataArray interface. 4) Resampling.
+    Central (co)moment calculation/manipulation
   license: NIST-PD
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
-    - wpk-nist-gov
+    - usnistgov
