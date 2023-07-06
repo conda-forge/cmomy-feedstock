@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 2b04dbcafa49cadffab15e0d8b1c7fadcca5096d965f28e9ecaad8305ab6b5b9
+  sha256: 4c5d465377cfa1d07cc32735838a73562803b4cda63e7670d899d1a389f3a5d7
 
 build:
   noarch: python
@@ -28,6 +28,7 @@ requirements:
     - typing-extensions
     - custom-inherit
     - module-utilities >=0.1
+    - lazy_loader
 
 test:
   imports:
