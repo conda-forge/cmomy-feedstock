@@ -9,11 +9,7 @@ Package license: NIST-PD
 
 Summary: Central (co)moment calculation/manipulation
 
-A Python package to calculate and manipulate Central (co)moments.
-The main features of `cmomy` are 1) Fast calculation of central
-moments and comoments with weights.  The speed comes from using
-Numba.  2) Support for scalar and vector inputs. 3) Numpy and
-xarray DataArray interface. 4) Resampling.
+Central (co)moment calculation/manipulation
 
 
 Current build status
@@ -150,5 +146,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@wpk-nist-gov](https://github.com/wpk-nist-gov/)
+* [@usnistgov](https://github.com/usnistgov/)
 
