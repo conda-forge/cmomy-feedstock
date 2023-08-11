@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 4c5d465377cfa1d07cc32735838a73562803b4cda63e7670d899d1a389f3a5d7
+  sha256: e0b79d0866809d4b636543fd4f5413c61df9a26dfd0f874002799988199847d3
 
 build:
   noarch: python
