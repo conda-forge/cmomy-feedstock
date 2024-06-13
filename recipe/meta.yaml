@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 50fe45a12e35fd01ff25b3bf2989ccf7d67d8a1de6712819e57ea1a810c2b833
+  sha256: 6b6e44790fd1fafcb6e96dde9ef25715f5adeb1f6b7374e80090d69258c533cb
 
 build:
   noarch: python
@@ -16,17 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - hatch-fancy-pypi-readme
     - hatch-vcs
     - hatchling
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - docstring-inheritance
     - lazy_loader
     - module-utilities >=0.6
-    - numba >=0.50
+    - numba >=0.58
     - numpy >=1.21
     - typing-extensions
     - xarray >=0.16
