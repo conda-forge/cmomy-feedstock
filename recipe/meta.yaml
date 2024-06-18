@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 6b6e44790fd1fafcb6e96dde9ef25715f5adeb1f6b7374e80090d69258c533cb
+  sha256: c5e8787199fb3297ba43ed1d249965bb206bdb163c508bbc1fd919197974444e
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - lazy_loader
     - module-utilities >=0.6
     - numba >=0.58
-    - numpy >=1.21
+    - numpy >1.24
     - typing-extensions
     - xarray >=0.16
 
