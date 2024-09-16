@@ -1,13 +1,13 @@
 {% set name = "cmomy" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 761e0d48ea22f3d775802310529979514913fdf14579562bb8169fbfe72dcd7a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
+  sha256: d2179980fd67eda3b530b9b368264588a2512a28df6cb3829f1c013927d80419
 
 build:
   noarch: python
@@ -16,20 +16,20 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.13
+    - python >=3.9,<3.13
     - hatch-fancy-pypi-readme
     - hatch-vcs
     - hatchling
     - pip
   run:
-    - python >=3.8,<3.13
+    - python >=3.9,<3.13
     - docstring-inheritance
-    - lazy_loader
+    - lazy-loader
     - module-utilities >=0.6
     - numba >=0.58
     - numpy >1.24
     - typing-extensions
-    - xarray >=0.16
+    - xarray >=2023.9.0
 
 test:
   imports:
