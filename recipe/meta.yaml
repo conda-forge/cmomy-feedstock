@@ -1,6 +1,6 @@
 {% set name = "cmomy" %}
-{% set version = "1.0.1" %}
-{% set python_min = "3.9" %}
+{% set version = "1.0.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 0d86383b6bce243797118c710af7f06195e968622467b43daa1ab1ed09539652
+  sha256: c26a5523f0c86c207550dc07b51b899114ccb08290c977ea6f8746fdf5287d8f
 
 build:
   noarch: python
@@ -18,9 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatch-fancy-pypi-readme
-    - hatch-vcs
-    - hatchling
+    - uv-build >=0.9.9,<0.10.0
     - pip
   run:
     - python >={{ python_min }},<3.14
