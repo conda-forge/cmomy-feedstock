@@ -1,5 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: c26a5523f0c86c207550dc07b51b899114ccb08290c977ea6f8746fdf5287d8f
+  sha256: 82c3ba8ce426d81c5947e55963b9231858552d997c04c2851b0f0dfe9112df42
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - uv-build >=0.9.9,<0.10.0
     - pip
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }}
     - docstring-inheritance
     - lazy-loader
     - module-utilities >=0.10.1
