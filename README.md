@@ -23,7 +23,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/cmomy-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/cmomy-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -45,31 +47,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cmomy` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install cmomy
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install cmomy
 ```
 
-It is possible to list all of the versions of `cmomy` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add cmomy
+# for installing globally
+pixi global install cmomy
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `cmomy` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search cmomy --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search cmomy --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search cmomy --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -81,6 +125,8 @@ mamba repoquery whoneeds cmomy --channel conda-forge
 # List dependencies of `cmomy`:
 mamba repoquery depends cmomy --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
