@@ -1,6 +1,5 @@
 {% set name = "cmomy" %}
-{% set version = "1.2.0" %}
-{% set python_min = "3.10" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cmomy-{{ version }}.tar.gz
-  sha256: 75faa5a69b902b06899063000adb7755cba8fcb070fc406297ce551b237bf579
+  sha256: 281308c0f8d25884b71a123e63f68f337bf94a28f417deb6c115c926a51aac84
 
 build:
   noarch: python
@@ -18,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv-build >=0.9.9,<0.10.0
+    - uv-build >=0.13.6,<0.14.0
     - pip
   run:
     - python >={{ python_min }}
@@ -26,7 +25,8 @@ requirements:
     - lazy-loader
     - module-utilities >=0.10.1
     - numba >=0.58
-    - numpy >1.24
+    - numpy >=1.24
+    - pandas >=2.3.3
     - typing_extensions >=4.10.0
     - xarray >=2023.9.0
 
